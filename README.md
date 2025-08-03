@@ -1,12 +1,12 @@
-# mServArch
+# mServArcxh
 Main repository for documentation, architecture, etc.
 
-## About mServArch
-Project mServArch is an all-encompassing, plugabble personal utility/tools repository. mServArch uses a microservice architecture with clear, strict service isolation. That is, all microservices, though interconnectable, can only communicate via predefined service communication routes and layers.
+## About mServArcxh
+Project mServArcxh is an all-encompassing, plugabble personal utility/tools repository. mServArcxh uses a microservice architecture with clear, strict service isolation. That is, all microservices, though interconnectable, can only communicate via predefined service communication routes and layers.
 
-## mServArch Architecture
+## mServArcxh Architecture
 
-Project mServArch is composed of the following layers:
+Project mServArcxh is composed of the following layers:
 
 - **Frontend**  
   - A Next.js + TypeScript application.  
@@ -23,11 +23,11 @@ Project mServArch is composed of the following layers:
   - Each microservice contains only its domain-specific business logic.
   - Microservices do not directly access the database; all data operations go through the Database Access Layer.
 
-- **Database Layer (`mServArch-dbcore`)**  
+- **Database Layer (`mServArcxh-dbcore`)**  
   - Centralized schema ownership and data access.
   - Composed of:
     - **PostgreSQL instance** – stores all persistent data.
     - **DAL (Data Access Layer)** – a C++ gRPC service that provides structured access to the database.
   - The DAL and PostgreSQL each run in separate containers and communicate over Docker’s internal network.
 
-![mServArch architecture diagram](assets/mServArch-architecture.png)
+![mServArcxh architecture diagram](assets/mServArcxh-architecture.png)
