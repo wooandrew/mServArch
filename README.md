@@ -1,12 +1,12 @@
-# helm
+# mServArch
 Main repository for documentation, architecture, etc.
 
-## About helm
-Project Helm is an all-encompassing, plugabble personal utility/tools repository. Helm uses a microservice architecture with clear, strict service isolation. That is, all microservices, though interconnectable, can only communicate via predefined service communication routes and layers.
+## About mServArch
+Project mServArch is an all-encompassing, plugabble personal utility/tools repository. mServArch uses a microservice architecture with clear, strict service isolation. That is, all microservices, though interconnectable, can only communicate via predefined service communication routes and layers.
 
-## helm Architecture
+## mServArch Architecture
 
-Project Helm is composed of the following layers:
+Project mServArch is composed of the following layers:
 
 - **Frontend**  
   - A Next.js + TypeScript application.  
@@ -23,11 +23,11 @@ Project Helm is composed of the following layers:
   - Each microservice contains only its domain-specific business logic.
   - Microservices do not directly access the database; all data operations go through the Database Access Layer.
 
-- **Database Layer (`helm-dbcore`)**  
+- **Database Layer (`mServArch-dbcore`)**  
   - Centralized schema ownership and data access.
   - Composed of:
     - **PostgreSQL instance** – stores all persistent data.
     - **DAL (Data Access Layer)** – a C++ gRPC service that provides structured access to the database.
   - The DAL and PostgreSQL each run in separate containers and communicate over Docker’s internal network.
 
-![helm architecture diagram](assets/helm-architecture.png)
+![mServArch architecture diagram](assets/mServArch-architecture.png)
